@@ -122,3 +122,24 @@ elif command == 'Wazzup':
     print('Wazzup')
 else:
     print('I don\'t understand you')
+
+
+digit = 0
+_string = '0'
+
+if _string == '0':
+    print(_string)
+
+if digit != 0:
+    print('digit is not equal to zero')
+else:
+    print('digit is equal to zero')
+
+
+if _string != '0':
+    print('_string is not equal to zero')
+else:
+    print('_string is equal to zero')
+
+if 0 == _string:
+    pass

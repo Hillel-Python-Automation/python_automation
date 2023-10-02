@@ -1,3 +1,5 @@
+import string as st
+
 print(type(''))
 print(type(""))
 
@@ -61,23 +63,23 @@ print("aasdas asdasd asdasd".index(' '))
 print("aasdas asdasd asdasd".rindex(' '))
 print("aasdas asdasd asdasd".count(' '))
 
-string = "aasdas asdasd asdasd"
+_string = "aasdas asdasd asdasd"
 
-for i, char in enumerate(string):
+for i, char in enumerate(_string):
     if char == ' ':
         print(i)
 
 print('Split')
-_list = string.split(' ')
+_list = _string.split(' ')
 print(_list)
 
 print('Join')
 print(', '.join(_list))
 
 print('Replace')
-print(string.replace('a', 'y'))
-print(string.replace(' ', '-'))
-print(string.replace(' ', ', '))
+print(_string.replace('a', 'y'))
+print(_string.replace(' ', '-'))
+print(_string.replace(' ', ', '))
 
 print('Strip')
 
@@ -101,6 +103,22 @@ text6 = "c:\\Windows\\Users\\Yurii\\"
 text4 = r"hello\nworld"
 text5 = 'hello\\nworld'
 
+text8 = "М'ясо"
+text7 = 'М\'ясо'
+
+multiline = """
+    Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.
+"""
+
+_multiline = '''
+    Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.
+'''
 
 print(text)
 
@@ -114,4 +132,11 @@ print(text6)
 print(int('45'))
 print(float('45.5'))
 
+
+print(multiline)
+print(_multiline)
+
+print(st.digits)
+print(st.ascii_lowercase)
+print(st.ascii_uppercase)
 
