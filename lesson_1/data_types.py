@@ -82,15 +82,14 @@ var_dict = {
 
 
 def print_var(variable):
-    print('-' * 30)
+    print('=' * 50)
     print(variable)
 
 
 def print_variable(variable):
-    print('-' * 30)
-    print(variable)
-    print(type(variable))
+    print_var(variable)
     print(id(variable))
+    print(type(variable))
 
 
 if __name__ == "__main__":
