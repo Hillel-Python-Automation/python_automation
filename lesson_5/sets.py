@@ -36,7 +36,6 @@ print('union', var_set3.union(var_set5))
 print(var_set3 | var_set5)
 
 
-
 print(var_set3)
 var_set3.add('a')
 print(f"add a {var_set3}")
