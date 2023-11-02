@@ -20,7 +20,7 @@ students_list = [
     'grabarvlad'
 ]
 
-path_to_folder = "./lesson_10/home_work/"  # Change this to the desired parent directory
+path_to_folder = "./lesson_11/home_work/"  # Change this to the desired parent directory
 
 for folder in students_list:
     # Combine the parent directory and folder name to get the full path
