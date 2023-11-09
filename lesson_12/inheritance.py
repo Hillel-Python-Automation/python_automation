@@ -21,6 +21,9 @@ class Vehicle:
     def get_description(self):
         return f"The vehicle has {self.wheels} wheels and {self.gear} gear and uses {self.fuel}"
 
+    def __eq__(self, other):
+        return self.wheels == other.wheels and self.gear == other.gear and self.fuel == other.fuel
+
 
 class Body:
     def __init__(self, body_type, doors, steering_wheel):
@@ -76,9 +79,13 @@ class MultiInheritance(Body, Vehicle):
 
 if __name__ == "__main__":
     var_vehicle = Vehicle(4, "Manual", "Diesel")
+    var_vehicle2 = Vehicle(4, "Manual", "Diesel")
+
+    print(var_vehicle.__eq__(var_vehicle2))
     print(var_vehicle)
     print(var_vehicle.fuel)
     print(var_vehicle.wheels)
+    var_vehicle.gear = 'Automatic'
     print(var_vehicle.gear)
     print(var_vehicle.get_gear())
     print(var_vehicle.get_fuel())
