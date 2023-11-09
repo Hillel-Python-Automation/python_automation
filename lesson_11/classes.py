@@ -3,6 +3,10 @@ class Class:
     ...
 
 
+class Empty:
+    pass
+
+
 var_class = Class()
 
 print(Class)
