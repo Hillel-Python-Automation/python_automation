@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 # Abstract class minimal requirements. It should be inherited from ABC class and has at least one abstractmethod
 # Abstract class are not allowed to have class instances
 class AbstractClass(ABC):
-    @abstractmethod # This method should be implemented in every class inherited from this class
+    @abstractmethod  # This method should be implemented in every class inherited from this class
     def method(self):
         pass
 
