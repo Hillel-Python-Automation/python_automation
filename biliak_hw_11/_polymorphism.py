@@ -9,28 +9,59 @@ class Car:
     def wheels(self):
         print(4)
 
-    def _mode_of_transport(self):
-        print(8)
+    def mode_of_transport(self):
+        print("Private usage")
 
 
 class Bus:
     def wheels(self):
-        print(4)
+        print(8)
 
     def mode_of_transport(self):
-        print(8)
+        print("Public usage")
 
 
 car = Car()
-# car.wheels(4)
-# car._mode_of_transport(8)
-#
 bus = Bus()
-# bus.wheels(4)
-# bus.mode_of_transport(8)
 
-list_1 = [car.wheels(), car._mode_of_transport(), bus.wheels(), bus.mode_of_transport()]
+
+list_1 = [car, bus]
 
 for a in list_1:
-    print(a)
+    a.wheels()
+    a.mode_of_transport()
 
+
+# Створити клас Vehicle який має два методи desc() та wheels() котрі виводять
+# в консоль певну інформацію. Створити 2 дочірніх класи успадкованих від класу
+# Vehicle та перевизначити зазначені 2 методи.
+
+class Vehicle:
+    def desc(self):
+        print("vehicle desc")
+
+    def wheels(self):
+        print("vehicle wheels")
+
+
+class Ship(Vehicle):
+    def desc(self):
+        print("ship desc")
+
+    def wheels(self):
+        print("ship wheels")
+
+
+class Rocket(Vehicle):
+    def desc(self):
+        print("rocket desc")
+
+    def wheels(self):
+        print("rocket desc")
+
+
+vehicles = [Vehicle(), Ship(), Rocket()]
+
+for vehicle in vehicles:
+    vehicle.desc()
+    vehicle.wheels()
