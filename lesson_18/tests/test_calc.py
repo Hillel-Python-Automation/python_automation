@@ -4,11 +4,22 @@ from parameterized import parameterized
 
 
 class TestCalculator(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        print('SetUpClass')
+        cls._calc = Calculator()
+
+    @classmethod
+    def tearDownClass(cls):
+        print('TearDownClass')
+
     def setUp(self):
-        self.calc = Calculator()
+        print('setUp')
+        self.calc = self._calc
         print(id(self.calc))
 
     def tearDown(self):
+        print('tearDown')
         del self.calc
 
     def test_add_2_plus_2(self):

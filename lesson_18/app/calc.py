@@ -17,7 +17,7 @@ class Calculator:
             raise TypeError("Please use only next allowed types: int, float")
         return a + b
 
-    def subsctract(self, a, b):
+    def substract(self, a, b):
         return a - b
 
     def mult(self, a, b):
