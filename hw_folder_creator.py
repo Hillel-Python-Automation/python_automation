@@ -20,7 +20,10 @@ students_list = [
     'grabarvlad'
 ]
 
-path_to_folder = "./lesson_15/home_work/"  # Change this to the desired parent directory
+path_to_folder = "./lesson_20/home_work/"  # Change this to the desired parent directory
+os.makedirs(os.path.join(path_to_folder), exist_ok=True)
+with open(f'{os.path.join(path_to_folder)}__init__.py', 'w'):
+    pass
 
 for folder in students_list:
     # Combine the parent directory and folder name to get the full path
