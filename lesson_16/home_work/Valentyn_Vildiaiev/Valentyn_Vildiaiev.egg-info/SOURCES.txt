@@ -1,0 +1,6 @@
+LICENSE
+setup.py
+Valentyn_Vildiaiev.egg-info/PKG-INFO
+Valentyn_Vildiaiev.egg-info/SOURCES.txt
+Valentyn_Vildiaiev.egg-info/dependency_links.txt
+Valentyn_Vildiaiev.egg-info/top_level.txt
