@@ -14,10 +14,10 @@ def get_booking_ids():
 
 
 @fixture
-def create_booking():
+def create_booking(auth_create_token):
     app = BookingApp()
     response = app.create_booking()
     yield response
     booking_id = response.json()['bookingid']
-    token = app.auth_create_token().json()['token']
+    token = auth_create_token.json()['token']
     BookingApp().delete_booking(booking_id=booking_id, token=token)
