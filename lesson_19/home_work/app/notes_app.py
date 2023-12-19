@@ -18,9 +18,19 @@ class NotesApp:
         except IndexError:
             return "Index out of range"
 
+    def get_all_notes(self):
+        return self.notes_list
+
     def edit_note(self, index, content):
         try:
             self.notes_list[index].content = content
             return "Note edited successfully"
+        except IndexError:
+            return "Index out of range"
+
+    def delete_note(self, index):
+        try:
+            self.notes_list.pop(index)
+            return "Note is deleted successfully"
         except IndexError:
             return "Index out of range"
