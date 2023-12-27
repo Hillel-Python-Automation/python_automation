@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: Valentyn-Vildiaiev
+Version: 0.0.1
+Summary: Wheel Package
+Author: Valentyn Vildiaiev
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Windows :: Linux
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# WHEEL PACKAGE
+## This package was created to complete the homework task
+### Related to Wheel Module
