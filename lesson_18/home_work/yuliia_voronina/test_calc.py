@@ -25,7 +25,7 @@ class TestCalculator(unittest.TestCase):
     def test_add_2_plus_2(self):
         self.assertEqual(self.calc.add(2, 2), 4)
 
-    # mult test 1
+    # mult test old
     def test_mult_2_3(self):
         self.assertEqual(self.calc.mult(2, 3), 6)
 
@@ -37,7 +37,7 @@ class TestCalculator(unittest.TestCase):
             exected = "Not a number"
             self.assertEqual(self.calc.mult('a', 'a'), exected)
 
-    def test_mult_negative_on_positive(self):
+    def test_mult_positive_on_negative(self):
         self.assertEqual(self.calc.mult(2, -2), -4)
 
     def test_mult_negative_on_negative(self):
@@ -53,7 +53,22 @@ class TestCalculator(unittest.TestCase):
         actual = self.calc.mult(2.3, 2.5)
         self.assertEqual(round(actual, 1), expected)
 
-    #division test 1
+    # mult test new
+    def test_mult_2_fraction1_2(self):
+        self.assertEqual(self.calc.mult(2, 2 ** (-1)), 1)
+
+    def test_mult_2_str(self):
+        with self.assertRaises(TypeError):
+            exected = "Not a number"
+            self.assertEqual(self.calc.mult(2, 'a'), exected)
+
+    def test_mult_negative_on_positive(self):
+        self.assertEqual(self.calc.mult(-8, 2), -16)
+
+    def test_mult_0_5(self):
+        self.assertEqual(self.calc.mult(0, 5), 0)
+
+    #division test old
     def test_div_6_3(self):
         expected = 2
         actual = self.calc.div(6, 3)
@@ -81,7 +96,32 @@ class TestCalculator(unittest.TestCase):
             actual = self.calc.div(1, "str")
             self.assertEqual(actual, expected)
 
-    # sub test 1
+    #division test new
+    def test_div_str_on_float(self):
+        with self.assertRaises(TypeError):
+            expected = "not a number"
+            actual = self.calc.div("str", 1.1)
+            self.assertEqual(actual, expected)
+
+    def test_div_int_on_float(self):
+        with self.assertRaises(TypeError):
+            expected = 0.4
+            actual = self.calc.div(1, 2.5)
+            self.assertEqual(actual, expected)
+
+    def test_div_float_on_int(self):
+        with self.assertRaises(TypeError):
+            expected = 3.75
+            actual = self.calc.div(7.5, 2)
+            self.assertEqual(actual, expected)
+
+    def test_div_float_on_float(self):
+        with self.assertRaises(TypeError):
+            expected = 2
+            actual = self.calc.div(8.8, 4.4)
+            self.assertEqual(actual, expected)
+
+    # sub test old
     def test_sub_5_1_positive(self):
         actual = 4
         expected = self.calc.substract(5, 1)
@@ -109,7 +149,30 @@ class TestCalculator(unittest.TestCase):
             actual = self.calc.substract(10, "str")
             self.assertEqual(actual, expected)
 
-    # pow test 1
+    # sub test new
+    def test_sub_negative_bigger_negative(self):
+        actual = 4
+        expected = self.calc.substract(-1, -5)
+        self.assertEqual(expected, actual)
+
+    def test_bigger_negative_negative(self):
+        expected = -1.1
+        actual = self.calc.substract(-5.5, -4.4)
+        actual = round(actual, 1)
+        self.assertEqual(actual, expected)
+
+    def test_sub_float_int(self):
+        expected = 2.8
+        actual = self.calc.substract(5.9, 3.1)
+        self.assertEqual(actual, expected)
+
+    def test_sub_str_int(self):
+        with self.assertRaises(TypeError):
+            expected = "not a number"
+            actual = self.calc.substract("str", 10)
+            self.assertEqual(actual, expected)
+
+    # pow test old
     def test_power_2_3(self):
         expected = 8
         actual = self.calc.power(2, 3)
@@ -132,7 +195,30 @@ class TestCalculator(unittest.TestCase):
         actual = round(actual, 3)
         self.assertEqual(actual, expected)
 
-    # square root test 1
+    # pow test new
+    def test_power_negative_int_negative_int(self):
+        expected = -0.125
+        actual = self.calc.power(-2, -3)
+        self.assertEqual(actual, expected)
+
+    def test_power_int_zero(self):
+        expected = 1
+        actual = self.calc.power(3, 0)
+        self.assertEqual(actual, expected)
+
+    def test_power_zero_zero(self):
+        expected = 1
+        actual = self.calc.power(0, 0)
+        actual = round(actual, 2)
+        self.assertEqual(actual, expected)
+
+    def test_power_float_int(self):
+        expected = 6.25
+        actual = self.calc.power(2.5, 2)
+        actual = round(actual, 3)
+        self.assertEqual(actual, expected)
+
+    # square root test old
     def test_square_positive(self):
         expected = 3
         actual = self.calc.square_root(9)
@@ -155,6 +241,28 @@ class TestCalculator(unittest.TestCase):
         actual = self.calc.square_root(0)
         self.assertEqual(expected, actual)
 
+    # square root test new
+    def test_square_positive(self):
+        expected = 5
+        actual = self.calc.square_root(25)
+        self.assertEqual(expected, actual)
+
+    def test_square_negative(self):
+        with self.assertRaises(ValueError):
+            expected = "Number can't be negative"
+            actual = self.calc.square_root(-81)
+            self.assertEqual(expected, actual)
+
+    def test_square_float(self):
+        expected = 3.08
+        actual = self.calc.square_root(9.5)
+        actual = round(actual, 2)
+        self.assertEqual(expected, actual)
+
+    def test_square_zero(self):
+        expected = 0
+        actual = self.calc.square_root(0)
+        self.assertEqual(expected, actual)
 
     @parameterized.expand([
         ('two plus two equals four', 2, 2, 4),
