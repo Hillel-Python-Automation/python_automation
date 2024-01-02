@@ -12,3 +12,14 @@ def init_calc():
 @pytest.fixture()
 def notes_app():
     yield NotesApp()
+
+@pytest.fixture()
+def notes_inst():
+    return NotesApp()
+
+@pytest.fixture()
+def impossible_index(notes_inst):
+    list_of_notes = notes_inst.get_all_notes()
+    impossible_index = len(list_of_notes)
+    return impossible_index
+
