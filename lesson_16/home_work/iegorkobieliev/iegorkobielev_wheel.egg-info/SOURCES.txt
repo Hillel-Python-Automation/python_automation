@@ -1,0 +1,6 @@
+LICENSE
+setup.py
+iegorkobielev_wheel.egg-info/PKG-INFO
+iegorkobielev_wheel.egg-info/SOURCES.txt
+iegorkobielev_wheel.egg-info/dependency_links.txt
+iegorkobielev_wheel.egg-info/top_level.txt

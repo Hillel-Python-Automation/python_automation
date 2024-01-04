@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: iegorkobielev-wheel
+Version: 0.0.1
+Summary: Demo wheel
+Author: Iegor Kobieliev
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# WHEEL PACKAGE EXAMPLE
+## This package is created to demonstrate the home work 17 by Iegor Kobielev
