@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: StupakVitalii_wheel
+Version: 0.0.2
+Summary: Demo wheel
+Author: Stupak Vitalii
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: License
+
+# WHEEL PACKAGE EXAMPLE
+## Package with the homework 17 by Stupak Vitalii

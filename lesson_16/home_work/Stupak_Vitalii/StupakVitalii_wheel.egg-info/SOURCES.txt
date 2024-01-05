@@ -1,0 +1,8 @@
+License
+setup.py
+HW_17_StupakVitalii_class_method_static_method/HW_17_StupakVitalii_class_method_static_method.py
+HW_17_StupakVitalii_class_method_static_method/__init__.py
+StupakVitalii_wheel.egg-info/PKG-INFO
+StupakVitalii_wheel.egg-info/SOURCES.txt
+StupakVitalii_wheel.egg-info/dependency_links.txt
+StupakVitalii_wheel.egg-info/top_level.txt
