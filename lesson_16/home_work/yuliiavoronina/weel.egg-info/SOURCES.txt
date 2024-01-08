@@ -1,0 +1,8 @@
+main.py
+setup.py
+weel.egg-info/PKG-INFO
+weel.egg-info/SOURCES.txt
+weel.egg-info/dependency_links.txt
+weel.egg-info/top_level.txt
+yuliia_voronina/__init__.py
+yuliia_voronina/wheel_module.py
